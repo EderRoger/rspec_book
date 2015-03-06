@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305162935) do
+ActiveRecord::Schema.define(version: 20150306111512) do
 
   create_table "criador_pokemons", force: true do |t|
     t.datetime "created_at"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20150305162935) do
   create_table "pokemons", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nome"
+    t.integer  "id_nacional"
   end
 
 end

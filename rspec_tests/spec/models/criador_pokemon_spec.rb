@@ -23,7 +23,7 @@ describe CriadorPokemon do
       end
 
       it 'possui o nome correto' do
-        p subject
+        p Pokemon.last
         expect(subject.nome).to eq('Charizard')
       end
     end
