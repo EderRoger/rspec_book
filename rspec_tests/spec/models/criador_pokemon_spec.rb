@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe CriadorPokemon do
 
-  describe '#criar' do
+  describe '#criar', vcr: { cassette_name: 'CriadorPokemon/criar' } do
+
     let(:criador_pokemon) do
       CriadorPokemon.new(6)
     end
@@ -23,7 +24,6 @@ describe CriadorPokemon do
       end
 
       it 'possui o nome correto' do
-        p Pokemon.last
         expect(subject.nome).to eq('Charizard')
       end
     end
